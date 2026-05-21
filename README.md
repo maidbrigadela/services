@@ -19,17 +19,6 @@ This website provides clear and up-to-date information for our clients, includin
 - What is included in regular and deep cleaning services
 - Preparation instructions and policies
 
-## How to Update the Site
-
-1. Edit the corresponding HTML file:
-   - `a-la-carte.html` – for pricing and services
-   - `what-to-expect.html` – for preparation and policies
-   - `index.html` – for the homepage
-
-2. Commit your changes to the `main` branch.
-
-Changes will automatically appear on the live site within seconds.
-
 ## Contact
 
 **Maid Brigade LA & South Bay**  
