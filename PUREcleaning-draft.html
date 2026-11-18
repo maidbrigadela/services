@@ -33,11 +33,14 @@
 
   .draft-bar { background: #fff4d6; color: #7a5300; text-align: center; font-size: 13px; padding: 8px 16px; font-weight: 600; }
 
-  .topbar { background: var(--teal-dark); color: #fff; }
+  .topbar { background: #fff; color: var(--teal-dark); border-bottom: 1px solid #e3eef0; }
   .topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
-  .brand { font-weight: 700; font-size: 1.35rem; letter-spacing: .3px; }
-  .brand small { display: block; font-weight: 500; font-size: .72rem; color: #f9c74f; letter-spacing: .6px; }
-  .topbar a.phone { color: #fff; font-weight: 600; text-decoration: none; }
+  .brand img { width: 210px; height: auto; display: block; }
+  .brand small { display: block; font-weight: 600; font-size: .68rem; color: var(--teal-dark); letter-spacing: .6px; margin-top: 6px; }
+  .topbar a.phone { color: var(--teal-dark); font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+  .logo-frame { background: #fff; padding: 28px; }
+  .logo-frame img { width: 100%; height: auto; }
+  video { width: 100%; aspect-ratio: 16/9; border-radius: 6px; background: #000; display: block; }
 
   .crumbs { background: var(--aqua-bg); font-size: .95rem; }
   .crumbs .wrap { padding-top: 14px; padding-bottom: 0; color: var(--teal-dark); }
@@ -113,7 +116,7 @@
 
 <header class="topbar">
   <div class="wrap">
-    <div class="brand">Maid Brigade<small>LA &amp; SOUTH BAY OF LA'S MOST-TRUSTED HOUSECLEANING SERVICE</small></div>
+    <div class="brand"><img src="images/MaidBridgade-PrimaryLogo-4color-100920.jpg" alt="Maid Brigade" width="210" height="43"><small>LA &amp; SOUTH BAY OF LA'S MOST-TRUSTED HOUSECLEANING SERVICE</small></div>
     <a class="phone" href="tel:+13105394000">(310) 539-4000</a>
   </div>
 </header>
@@ -131,7 +134,7 @@
       <p>Most traditional cleaning products are loaded with harsh chemicals, synthetic fragrances, and residues that linger on the surfaces your family touches every day. PUREcleaning® is Maid Brigade's answer: a proprietary system built around electrolyzed water made from nothing more than water, salt, and electricity, paired with hospital-grade disinfection, so your home comes out cleaner and healthier, not just tidier.</p>
       <p style="margin-top:26px;"><a class="btn" href="tel:+13105394000">Get an Estimate</a></p>
     </div>
-    <div class="frame"><div class="ph">PUREcleaning® logo<br>(replace with logo image)</div></div>
+    <div class="frame logo-frame"><img src="images/PUREcleaning-Logo-Tagline.jpg" alt="PUREcleaning® – Complete Home Cleaning and Disinfection" width="600" height="506"></div>
   </div>
 </div>
 
@@ -179,7 +182,7 @@
   <div class="wrap center">
     <h2>Watch How PUREcleaning® Works</h2>
     <div class="video">
-      <iframe src="https://www.youtube.com/embed/wxqVWYDZxn0" title="PUREcleaning video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <video controls preload="metadata" playsinline src="purecleaning-video.mp4.mp4" title="How PUREcleaning works"></video>
     </div>
   </div>
 </section>
