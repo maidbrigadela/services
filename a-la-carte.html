@@ -1,147 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maid Brigade LA & South Bay - À La Carte & Add-On Services</title>
-  <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background: #f8f9fa; color: #333; line-height: 1.6; }
-    .container { max-width: 900px; margin: 0 auto; background: white; border: 1px solid #ddd; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .header { background: #005e82; color: white; padding: 40px 30px; text-align: center; }
-    .tagline { color: #f49d1e; font-size: 16px; font-weight: bold; letter-spacing: 2px; margin: 0; }
-    .content { padding: 40px 30px; }
-    h1 { text-align: center; color: #005e82; margin-bottom: 10px; }
-    h2 { color: #005e82; border-bottom: 3px solid #f49d1e; padding-bottom: 10px; margin-top: 40px; }
-    h3 { color: #005e82; margin-top: 30px; }
-    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
-    th { background: #f4f8fa; color: #005e82; font-weight: 600; }
-    .price { font-weight: 600; color: #005e82; }
-    .note { font-size: 13.5px; color: #555; margin: 25px 0; }
-    .footer { background: #005e82; color: white; text-align: center; padding: 25px; font-size: 14px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À La Carte &amp; Add-On Services | Maid Brigade LA &amp; South Bay</title>
+<meta name="description" content="Maid Brigade LA add-on services and pricing: flat rate tasks, hourly deep clean tasks, and popular bundles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --teal-dark:#005e82; --navy:#1f3a5f; --aqua-bg:#d9eff1; --aqua-soft:#f4fafb; --orange:#f39a1e; --orange-dark:#d9840c; --lime:#c4d82e; --text:#222; --muted:#4a5560; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:"Montserrat", Arial, sans-serif; color:var(--text); line-height:1.7; background:#fff; font-size:16px; }
+  img { max-width:100%; display:block; }
+  a { color:var(--teal-dark); }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 24px; }
+  h1, h2, h3 { color:var(--teal-dark); line-height:1.2; margin:0 0 16px; }
+  h1 { font-size:clamp(2rem, 4.5vw, 2.8rem); font-weight:700; }
+  h2 { font-size:clamp(1.5rem, 3vw, 2.1rem); font-weight:700; }
+  h3 { font-size:1.2rem; font-weight:700; }
+  p { margin:0 0 14px; }
+  .topbar { background:#fff; border-bottom:1px solid #e3eef0; }
+  .topbar .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-top:14px; padding-bottom:14px; flex-wrap:wrap; }
+  .brand img { width:210px; height:auto; }
+  .brand small { display:block; font-weight:600; font-size:.68rem; color:var(--teal-dark); letter-spacing:.6px; margin-top:6px; }
+  .topbar a.phone { color:var(--teal-dark); font-weight:700; text-decoration:none; font-size:1.1rem; }
+  .crumbs { background:var(--aqua-bg); font-size:.95rem; }
+  .crumbs .wrap { padding-top:14px; color:var(--teal-dark); }
+  .crumbs a { text-decoration:none; }
+  .crumbs span.sep { margin:0 8px; }
+  .hero { background:linear-gradient(180deg, var(--aqua-bg) 0%, var(--aqua-bg) 70%, #fff 100%); padding:36px 0 56px; text-align:center; }
+  .hero .tagline { font-weight:600; font-size:1.15rem; color:var(--navy); margin:0 auto; max-width:720px; }
+  section { padding:56px 0; }
+  .band { background:var(--aqua-bg); }
+  .section-head { text-align:center; margin-bottom:32px; }
+  .section-head p { color:var(--muted); max-width:720px; margin:0 auto; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; }
+  .card { background:#fff; border-left:8px solid var(--lime); border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,.08); padding:26px 28px; }
+  .card p:last-child, .card ul:last-child, .card table:last-child { margin-bottom:0; }
+  .note { background:#fff4d6; color:#5c4000; border-radius:6px; padding:14px 18px; font-size:.95rem; margin-top:24px; }
+  .checks { list-style:none; padding:0; margin:0 0 14px; }
+  .checks li { padding-left:30px; position:relative; margin:8px 0; }
+  .checks li::before { content:""; position:absolute; left:6px; top:7px; width:7px; height:13px; border-right:3px solid var(--teal-dark); border-bottom:3px solid var(--teal-dark); transform:rotate(45deg); }
+  .xs { list-style:none; padding:0; margin:0; }
+  .xs li { padding-left:30px; position:relative; margin:8px 0; }
+  .xs li::before { content:"\00d7"; position:absolute; left:6px; top:-3px; font-size:1.4rem; color:#c0392b; font-weight:700; }
+  .sub { font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:var(--muted); margin:18px 0 4px; }
+  .tag { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.6px; background:#fff4d6; color:#7a5300; padding:3px 10px; border-radius:999px; margin-left:8px; vertical-align:middle; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { padding:11px 12px; text-align:left; border-bottom:1px solid #e7eef0; vertical-align:top; }
+  th { background:var(--aqua-soft); color:var(--teal-dark); font-weight:700; font-size:.9rem; }
+  td.price, th.price { text-align:right; white-space:nowrap; }
+  td.price { font-weight:700; color:var(--teal-dark); }
+  td.save { color:#2e6b25; font-weight:700; white-space:nowrap; text-align:right; }
+  .table-card { background:#fff; border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,.08); overflow-x:auto; }
+  .btn { display:inline-block; background:var(--orange); color:#111; font-weight:600; text-decoration:none; padding:12px 30px; border-radius:999px; }
+  .btn:hover { background:var(--orange-dark); }
+  .text-link { font-weight:600; }
+  .cta { background:var(--teal-dark); color:#fff; text-align:center; }
+  .cta h2 { color:#fff; }
+  .cta p { color:#e3f2f5; }
+  .cta .phone-big { font-size:1.4rem; font-weight:700; color:#fff; text-decoration:none; }
+  footer { background:#0d2e40; color:#b9cdd6; text-align:center; font-size:.85rem; padding:24px 16px; }
+  footer a { color:#b9cdd6; }
+  @media (max-width:820px) { section { padding:44px 0; } .wrap { padding:0 16px; } .card { padding:22px 20px; } .grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
-<div class="container">
-  <!-- Clean Blue Header -->
-  <div class="header">
-    <h1 style="margin:0; font-size:32px; color:white;">Maid Brigade</h1>
-    <p class="tagline">LA & SOUTH BAY OF LA'S MOST-TRUSTED HOUSECLEANING SERVICE</p>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" style="text-decoration:none;"><img src="images/MaidBridgade-PrimaryLogo-4color-100920.jpg" alt="Maid Brigade" width="210" height="43"><small>LA &amp; SOUTH BAY OF LA'S MOST-TRUSTED HOUSECLEANING SERVICE</small></a>
+    <a class="phone" href="tel:+13105394000">(310) 539-4000</a>
   </div>
+</header>
 
-  <div class="content">
-    <h1>À La Carte & Add-On Services</h1>
-    <p style="text-align:center; font-size:18px;">Add these services to your regular cleaning or Deep Clean</p>
+<div class="crumbs">
+  <div class="wrap"><a href="index.html">Service Information</a><span class="sep">|</span>À La Carte &amp; Add-On Services</div>
+</div>
 
-    <h2>Flat Rate Tasks (Fixed Price)</h2>
-
-    <h3>Kitchen</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Fridge Clean</td><td class="price">$30</td></tr>
-      <tr><td>Freezer Clean</td><td class="price">$20</td></tr>
-      <tr><td>Oven Clean</td><td class="price">$50</td></tr>
-      <tr><td>Coffee Maker / Keurig Descale & Clean</td><td class="price">$15</td></tr>
-      <tr><td>Toaster / Toaster Oven / Air Fryer Interior Clean</td><td class="price">$15</td></tr>
-      <tr><td>Dishwasher Interior Clean</td><td class="price">$25</td></tr>
-      <tr><td>Silverware Drawer Clean Out</td><td class="price">$20</td></tr>
-    </table>
-
-    <h3>Bathroom</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Shower Head Descale & Deep Scrub</td><td class="price">$20</td></tr>
-      <tr><td>Bathroom Exhaust Fan / Vent Deep Clean</td><td class="price">$15</td></tr>
-    </table>
-
-    <h3>Laundry & Household</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Change Linens (per bed)</td><td class="price">$10</td></tr>
-      <tr><td>Laundry Folding (per load)</td><td class="price">$30</td></tr>
-      <tr><td>Clean Inside Washer / Dryer</td><td class="price">$30</td></tr>
-      <tr><td>Wash Trash Cans (inside & out, per can)</td><td class="price">$10</td></tr>
-      <tr><td>Fireplace Cleaning</td><td class="price">$45</td></tr>
-    </table>
-
-    <h3>Pet & Fabric Care</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Pet Hair Removal / Upholstery Vacuuming - Chair</td><td class="price">$20</td></tr>
-      <tr><td>Pet Hair Removal / Upholstery Vacuuming - Couch</td><td class="price">$40</td></tr>
-      <tr><td>Pet Hair Removal / Upholstery Vacuuming - Sectional</td><td class="price">$50</td></tr>
-      <tr><td>Vacuum Mattress</td><td class="price">$25</td></tr>
-    </table>
-
-    <h3>Windows & Glass</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Interior Windows (set of 2)</td><td class="price">$10</td></tr>
-      <tr><td>Interior Windows & Tracks (set of 2)</td><td class="price">$20</td></tr>
-      <tr><td>Sliding Glass Door / French Doors (each set)</td><td class="price">$15</td></tr>
-    </table>
-
-    <h3>Entry & Exterior</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Front Door / Sidelights Cleaning (inside & out)</td><td class="price">$25</td></tr>
-      <tr><td>Hand Wipe Interior Doors (front & back, per door)</td><td class="price">$10</td></tr>
-      <tr><td>Balcony Cleaning</td><td class="price">$20</td></tr>
-      <tr><td>Porch Cleaning</td><td class="price">$30</td></tr>
-      <tr><td>Large Deck / Patio Cleaning</td><td class="price">$50</td></tr>
-      <tr><td>Wipe Patio Furniture (table + 4 chairs)</td><td class="price">$25</td></tr>
-      <tr><td>Garage (remove cobwebs & sweep)</td><td class="price">$20</td></tr>
-    </table>
-
-    <h3>Disinfection</h3>
-    <table>
-      <tr><th>Task</th><th>Price</th></tr>
-      <tr><td>Home Gym Equipment Sanitizing & Disinfection</td><td class="price">$40</td></tr>
-      <tr><td>Kids Playroom Disinfection</td><td class="price">$40</td></tr>
-      <tr><td>PUREmist Home Disinfection Spray (under 1000 sq ft)</td><td class="price">$10</td></tr>
-      <tr><td>PUREmist Home Disinfection Spray (under 2000 sq ft)</td><td class="price">$20</td></tr>
-      <tr><td>PUREmist Home Disinfection Spray (over 2000 sq ft)</td><td class="price">$30</td></tr>
-    </table>
-
-    <h2>Hourly / Deep Clean Tasks (Billed by Time)</h2>
-    <table>
-      <tr style="background:#fff4e6;"><th>Task</th><th>Estimated Cost</th></tr>
-      <tr><td>Hand Wipe Baseboards</td><td>$65 – $195</td></tr>
-      <tr><td>Hand Wipe Blinds</td><td>$65 – $195</td></tr>
-      <tr><td>High Dusting (cabinets, crown molding, fixtures)</td><td>$40 – $60</td></tr>
-      <tr><td>Shelves (moving items to dust)</td><td>$65 – $195</td></tr>
-      <tr><td>Closet / Pantry Organizing & Wipe-Down</td><td>$50 – $100</td></tr>
-      <tr><td>Inside Kitchen or Bathroom Cabinets & Drawers</td><td>$65 – $195</td></tr>
-      <tr><td>Deep Clean Outside of Kitchen/Bathroom Cabinets</td><td>$65 – $130</td></tr>
-      <tr><td>Shower Tile & Grout Cleaning (walls)</td><td>$65 – $130</td></tr>
-      <tr><td>Wash Dishes</td><td>$35 – $65</td></tr>
-      <tr><td>Spot Clean Walls</td><td>$50 – $100</td></tr>
-      <tr><td>Antimicrobial Barrier Application</td><td>$50 – $150</td></tr>
-      <tr><td>Kids Toys & Playroom Sanitizing & Disinfection</td><td>$65 – $130</td></tr>
-    </table>
-
-    <h2>Suggested Popular Bundles</h2>
-    <table>
-      <tr style="background:#f4f8fa;"><th>Bundle Name</th><th>Includes</th><th>Price</th><th>Savings</th></tr>
-      <tr><td>Kitchen Refresh Bundle</td><td>Fridge + Oven + Coffee Maker + Small Appliance</td><td class="price">$85</td><td>$25</td></tr>
-      <tr><td>Bathroom Deep Clean Bundle</td><td>Shower Head + Shower Tile & Grout + Exhaust Fan</td><td class="price">$75</td><td>$35</td></tr>
-      <tr><td>Pet-Friendly Bundle</td><td>Pet Hair Removal (Couch) + Vacuum Mattress + High Dusting</td><td class="price">$85</td><td>$30</td></tr>
-      <tr><td>Window Refresh Bundle</td><td>Interior Windows & Tracks (up to 10 windows)</td><td class="price">$100</td><td>$35</td></tr>
-      <tr><td>Bed Refresh Bundle</td><td>Change Linens + Vacuum Mattress (per bed)</td><td class="price">$25</td><td>$10</td></tr>
-      <tr><td>Family-Friendly Sanitizing Bundle</td><td>Kids Playroom Disinfection + Home Gym Equipment Sanitizing & Disinfection + PUREmist Spray (under 2000 sq ft)</td><td class="price">$75</td><td>$25</td></tr>
-      <tr><td>Outdoor Bundle</td><td>Exterior Door (Front, sliding or french doors) + Porch/Balcony or Patio + Wipe Furniture Set</td><td class="price">$50</td><td>$25</td></tr>
-    </table>
-
-    <p class="note" style="text-align:center;">
-      * Hourly / Deep Clean tasks are billed based on actual time spent.<br>
-      * Custom bundles and pricing available upon request.
-    </p>
-  </div>
-
-  <div class="footer">
-    <p><strong>Maid Brigade LA & South Bay</strong> | Trusted • Professional • Green Cleaning Certified</p>
-    <p>(310) 539-4000 | maidbrigadela@outlook.com</p>
+<div class="hero">
+  <div class="wrap">
+    <h1>À La Carte &amp; Add-On Services</h1>
+    <p class="tagline">Add these services to your regular cleaning or Deep Clean.</p>
   </div>
 </div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Flat Rate Tasks</h2><p>Fixed prices, added to any regular cleaning or deep clean.</p></div>
+    <div class="grid"><div class="card"><h3>Kitchen</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Fridge Clean</td><td class="price">$30</td></tr><tr><td>Freezer Clean</td><td class="price">$20</td></tr><tr><td>Oven Clean</td><td class="price">$50</td></tr><tr><td>Coffee Maker / Keurig Descale &amp; Clean</td><td class="price">$15</td></tr><tr><td>Toaster / Toaster Oven / Air Fryer Interior Clean</td><td class="price">$15</td></tr><tr><td>Dishwasher Interior Clean</td><td class="price">$25</td></tr><tr><td>Silverware Drawer Clean Out</td><td class="price">$20</td></tr></table></div><div class="card"><h3>Bathroom</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Shower Head Descale &amp; Deep Scrub</td><td class="price">$20</td></tr><tr><td>Bathroom Exhaust Fan / Vent Deep Clean</td><td class="price">$15</td></tr></table></div><div class="card"><h3>Laundry &amp; Household</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Change Linens (per bed)</td><td class="price">$10</td></tr><tr><td>Laundry Folding (per load)</td><td class="price">$30</td></tr><tr><td>Clean Inside Washer / Dryer</td><td class="price">$30</td></tr><tr><td>Wash Trash Cans (inside &amp; out, per can)</td><td class="price">$10</td></tr><tr><td>Fireplace Cleaning</td><td class="price">$45</td></tr></table></div><div class="card"><h3>Pet &amp; Fabric Care</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Pet Hair Removal / Upholstery Vacuuming - Chair</td><td class="price">$20</td></tr><tr><td>Pet Hair Removal / Upholstery Vacuuming - Couch</td><td class="price">$40</td></tr><tr><td>Pet Hair Removal / Upholstery Vacuuming - Sectional</td><td class="price">$50</td></tr><tr><td>Vacuum Mattress</td><td class="price">$25</td></tr></table></div><div class="card"><h3>Windows &amp; Glass</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Interior Windows (set of 2)</td><td class="price">$10</td></tr><tr><td>Interior Windows &amp; Tracks (set of 2)</td><td class="price">$20</td></tr><tr><td>Sliding Glass Door / French Doors (each set)</td><td class="price">$15</td></tr></table></div><div class="card"><h3>Entry &amp; Exterior</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Front Door / Sidelights Cleaning (inside &amp; out)</td><td class="price">$25</td></tr><tr><td>Hand Wipe Interior Doors (front &amp; back, per door)</td><td class="price">$10</td></tr><tr><td>Balcony Cleaning</td><td class="price">$20</td></tr><tr><td>Porch Cleaning</td><td class="price">$30</td></tr><tr><td>Large Deck / Patio Cleaning</td><td class="price">$50</td></tr><tr><td>Wipe Patio Furniture (table + 4 chairs)</td><td class="price">$25</td></tr><tr><td>Garage (remove cobwebs &amp; sweep)</td><td class="price">$20</td></tr></table></div><div class="card"><h3>Disinfection</h3><table><tr><th>Task</th><th class="price">Price</th></tr><tr><td>Home Gym Equipment Sanitizing &amp; Disinfection</td><td class="price">$40</td></tr><tr><td>Kids Playroom Disinfection</td><td class="price">$40</td></tr><tr><td><a href="PUREmist.html">PUREmist</a> Home Disinfection Spray (under 1000 sq ft)</td><td class="price">$10</td></tr><tr><td><a href="PUREmist.html">PUREmist</a> Home Disinfection Spray (under 2000 sq ft)</td><td class="price">$20</td></tr><tr><td><a href="PUREmist.html">PUREmist</a> Home Disinfection Spray (over 2000 sq ft)</td><td class="price">$30</td></tr></table></div></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head"><h2>Hourly / Deep Clean Tasks</h2><p>Billed by actual time spent. Estimated cost ranges shown.</p></div>
+    <div class="table-card"><table><tr><th>Task</th><th class="price">Estimated Cost</th></tr><tr><td>Hand Wipe Baseboards</td><td class="price">$65 – $195</td></tr><tr><td>Hand Wipe Blinds</td><td class="price">$65 – $195</td></tr><tr><td>High Dusting (cabinets, crown molding, fixtures)</td><td class="price">$40 – $60</td></tr><tr><td>Shelves (moving items to dust)</td><td class="price">$65 – $195</td></tr><tr><td>Closet / Pantry Organizing &amp; Wipe-Down</td><td class="price">$50 – $100</td></tr><tr><td>Inside Kitchen or Bathroom Cabinets &amp; Drawers</td><td class="price">$65 – $195</td></tr><tr><td>Deep Clean Outside of Kitchen/Bathroom Cabinets</td><td class="price">$65 – $130</td></tr><tr><td>Shower Tile &amp; Grout Cleaning (walls)</td><td class="price">$65 – $130</td></tr><tr><td>Wash Dishes</td><td class="price">$35 – $65</td></tr><tr><td>Spot Clean Walls</td><td class="price">$50 – $100</td></tr><tr><td>Antimicrobial Barrier Application</td><td class="price">$50 – $150</td></tr><tr><td>Kids Toys &amp; Playroom Sanitizing &amp; Disinfection</td><td class="price">$65 – $130</td></tr></table></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head"><h2>Suggested Popular Bundles</h2><p>Combine popular add-ons and save.</p></div>
+    <div class="table-card">
+      <table><tr><th>Bundle</th><th>Includes</th><th class="price">Price</th><th class="price">Savings</th></tr><tr><td><strong>Kitchen Refresh Bundle</strong></td><td>Fridge + Oven + Coffee Maker + Small Appliance</td><td class="price">$85</td><td class="save">Save $25</td></tr><tr><td><strong>Bathroom Deep Clean Bundle</strong></td><td>Shower Head + Shower Tile &amp; Grout + Exhaust Fan</td><td class="price">$75</td><td class="save">Save $35</td></tr><tr><td><strong>Pet-Friendly Bundle</strong></td><td>Pet Hair Removal (Couch) + Vacuum Mattress + High Dusting</td><td class="price">$85</td><td class="save">Save $30</td></tr><tr><td><strong>Window Refresh Bundle</strong></td><td>Interior Windows &amp; Tracks (up to 10 windows)</td><td class="price">$100</td><td class="save">Save $35</td></tr><tr><td><strong>Bed Refresh Bundle</strong></td><td>Change Linens + Vacuum Mattress (per bed)</td><td class="price">$25</td><td class="save">Save $10</td></tr><tr><td><strong>Family-Friendly Sanitizing Bundle</strong></td><td>Kids Playroom Disinfection + Home Gym Equipment Sanitizing &amp; Disinfection + PUREmist Spray (under 2000 sq ft)</td><td class="price">$75</td><td class="save">Save $25</td></tr><tr><td><strong>Outdoor Bundle</strong></td><td>Exterior Door (Front, sliding or french doors) + Porch/Balcony or Patio + Wipe Furniture Set</td><td class="price">$50</td><td class="save">Save $25</td></tr></table>
+    </div>
+    <p class="note" style="text-align:center;">* Hourly / Deep Clean tasks are billed based on actual time spent.<br>* Custom bundles and pricing available upon request.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Want to Add Something to Your Next Cleaning?</h2>
+    <p>Call or email us and we'll add it to your next visit.</p>
+    <a class="phone-big" href="tel:+13105394000">(310) 539-4000</a>
+    <p style="margin-top:8px;"><a href="mailto:maidbrigadela@outlook.com" style="color:#e3f2f5;">maidbrigadela@outlook.com</a></p>
+  </div>
+</section>
+
+<footer>© Maid Brigade of Los Angeles · Serving LA &amp; the South Bay · Trusted • Professional • Green Cleaning Certified</footer>
+
 </body>
 </html>
