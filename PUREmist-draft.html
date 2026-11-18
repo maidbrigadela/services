@@ -33,11 +33,14 @@
 
   .draft-bar { background: #fff4d6; color: #7a5300; text-align: center; font-size: 13px; padding: 8px 16px; font-weight: 600; }
 
-  .topbar { background: var(--teal-dark); color: #fff; }
+  .topbar { background: #fff; color: var(--teal-dark); border-bottom: 1px solid #e3eef0; }
   .topbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
-  .brand { font-weight: 700; font-size: 1.35rem; letter-spacing: .3px; }
-  .brand small { display: block; font-weight: 500; font-size: .72rem; color: #f9c74f; letter-spacing: .6px; }
-  .topbar a.phone { color: #fff; font-weight: 600; text-decoration: none; }
+  .brand img { width: 210px; height: auto; display: block; }
+  .brand small { display: block; font-weight: 600; font-size: .68rem; color: var(--teal-dark); letter-spacing: .6px; margin-top: 6px; }
+  .topbar a.phone { color: var(--teal-dark); font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+  .logo-frame { background: #fff; padding: 28px; }
+  .logo-frame img { width: 100%; height: auto; }
+  video { width: 100%; aspect-ratio: 16/9; border-radius: 6px; background: #000; display: block; }
 
   .crumbs { background: var(--aqua-bg); font-size: .95rem; }
   .crumbs .wrap { padding-top: 14px; padding-bottom: 0; color: var(--teal-dark); }
@@ -121,7 +124,7 @@
 
 <header class="topbar">
   <div class="wrap">
-    <div class="brand">Maid Brigade<small>LA &amp; SOUTH BAY OF LA'S MOST-TRUSTED HOUSECLEANING SERVICE</small></div>
+    <div class="brand"><img src="images/MaidBridgade-PrimaryLogo-4color-100920.jpg" alt="Maid Brigade" width="210" height="43"><small>LA &amp; SOUTH BAY OF LA'S MOST-TRUSTED HOUSECLEANING SERVICE</small></div>
     <a class="phone" href="tel:+13105394000">(310) 539-4000</a>
   </div>
 </header>
@@ -140,7 +143,7 @@
       <p>Once visible dust, dirt, and allergens are removed, we apply our hypochlorous acid disinfectant with a handheld electrostatic sprayer. The charged mist wraps around curved and flat surfaces for 360-degree coverage, reaching corners and crevices a cloth can't. Because it doesn't need to be wiped away, the disinfectant stays on surfaces for the full contact time it needs, with no wiping that can re-contaminate them.</p>
       <p style="margin-top:26px;"><a class="btn" href="tel:+13105394000">Get an Estimate</a></p>
     </div>
-    <div class="frame"><div class="ph">Photo: PUREmist sprayer in use in a home<br>(replace with image)</div></div>
+    <div class="frame logo-frame"><img src="images/PUREmist_2-Color-Logo-bkgd.png" alt="PUREmist®" width="600" height="392"></div>
   </div>
 </div>
 
@@ -159,14 +162,14 @@
       <p>We focus on high-touch areas like door handles, light switches, drawer pulls, and more. Because it's applied electrostatically, the mist clings to surfaces for 360-degree coverage, including crevices that traditional spray-and-wipe methods may miss.</p>
       <p style="margin:0;"><strong>Ready to add PUREmist® to your next cleaning?</strong> <a class="text-link" href="tel:+13105394000">Call or submit a request form to learn more →</a></p>
     </div>
-    <div class="frame"><div class="ph">PUREmist® image or graphic<br>(replace e-water icon)</div></div>
+    <div class="frame logo-frame" style="max-width:420px;margin:0 auto;"><img src="images/PM-PC-logo-01.png" alt="PUREmist® brought to you by Maid Brigade" width="500" height="500"></div>
   </div>
 </section>
 
 <!-- Video / Safety -->
 <section class="band">
   <div class="wrap two">
-    <div class="frame" style="border-radius:6px;"><div class="ph" style="aspect-ratio:16/9;">Video: PUREmist portion of our PUREcleaning video,<br>or a new clip of a team misting a home</div></div>
+    <div><video controls preload="metadata" playsinline src="purecleaning-video.mp4.mp4" title="How PUREcleaning works"></video></div>
     <div>
       <p class="eyebrow">A Healthier Home for Your Family</p>
       <h2>Complete Disinfection in Minutes</h2>
